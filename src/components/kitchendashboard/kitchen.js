@@ -1,24 +1,18 @@
 import React, { useState } from 'react';
 import { Button, ButtonGroup, Container, Row, Col } from 'react-bootstrap';
+import OrderCard from './OrderCard';
 
 
 const KitchenDashboard = () => {
   const [activeCategory, setActiveCategory] = useState('Bangla');
-  const [orders, setOrders] = useState([]); 
 
   const categories = ['Bangla', 'Beverage', 'Chinese', 'Common', 'French', 'Indian', 'Italian', 'MAIN', 'Mexican'];
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
-
-    setOrders([]); 
   };
 
-  const refreshPage = () => {
-
-    setOrders([]); 
-  };
-
+  
   return (
     <Container className="mt-4">
       <Row>
@@ -36,29 +30,83 @@ const KitchenDashboard = () => {
           </ButtonGroup>
         </Col>
       </Row>
-      <Row className="mt-4 text-center">
+      <Row>
         <Col>
-          {orders.length === 0 ? (
-            <div>
-              <img
-                src="https://via.placeholder.com/150" 
-                alt="No Order"
-                className="mb-3"
-              />
-              <h5>No Order Found!!!</h5>
+            <div className={activeCategory ===  "Bangla" ? 'd-block' : 'd-none'}>
+              <div className='row'>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+              </div>
             </div>
-          ) : (
-            <div>
-       
+            <div className={activeCategory === "Beverage" ? 'd-block' : 'd-none'}>
+            <div className='row'>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+              </div>
             </div>
-          )}
-        </Col>
-      </Row>
-      <Row className="mt-4 text-center">
-        <Col>
-          <Button variant="primary" onClick={refreshPage}>
-            Refresh Page
-          </Button>
+            <div className={activeCategory === "Chinese" ? 'd-block' : 'd-none'}>
+            <div className='row'>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+              </div>
+            </div>
+            <div className={activeCategory === "Common" ? 'd-block' : 'd-none'}>
+            <div className='row'>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+              </div>
+            </div>
+            <div className={activeCategory === "French" ? 'd-block' : 'd-none'}>
+            <div className='row'>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+              </div>
+            </div>
+            <div className={activeCategory === "Indian" ? 'd-block' : 'd-none'}>
+            <div className='row'>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+              </div>
+            </div>
+            <div className={activeCategory === "Italian" ? 'd-block' : 'd-none'}>
+            <div className='row'>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+              </div>
+            </div>
+            <div className={activeCategory === "MAIN" ? 'd-block' : 'd-none'}>
+            <div className='row'>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+              </div>
+            </div>
+            <div className={activeCategory === "Mexican" ? 'd-block' : 'd-none'}>
+            <div className='row'>
+                <div className='col-4'>
+                  <OrderCard />
+                </div>
+              </div>
+            </div>
         </Col>
       </Row>
     </Container>

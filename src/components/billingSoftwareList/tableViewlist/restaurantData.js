@@ -1,0 +1,102 @@
+export const tableData = [
+    {
+      section: "AC",
+      tables: [
+        { tableNumber: "AC1", capacity: 4, status: "Available" },
+        { tableNumber: "AC2", capacity: 6, status: "Occupied" },
+        { tableNumber: "AC3", capacity: 2, status: "Available" },
+        { tableNumber: "AC4", capacity: 4, status: "Reserved" },
+        { tableNumber: "AC5", capacity: 4, status: "Available" },
+        { tableNumber: "AC6", capacity: 6, status: "Occupied" },
+        { tableNumber: "AC7", capacity: 2, status: "Available" },
+        { tableNumber: "AC8", capacity: 4, status: "Reserved" },
+        { tableNumber: "AC9", capacity: 4, status: "Available" },
+        { tableNumber: "AC10", capacity: 6, status: "Occupied" },
+        { tableNumber: "AC11", capacity: 2, status: "Available" },
+        { tableNumber: "AC12", capacity: 4, status: "Reserved" },
+        { tableNumber: "AC13", capacity: 4, status: "Available" },
+        { tableNumber: "AC14", capacity: 6, status: "Occupied" },
+        { tableNumber: "AC15", capacity: 2, status: "Available" },
+        { tableNumber: "AC16", capacity: 4, status: "Reserved" },
+        { tableNumber: "AC17", capacity: 4, status: "Available" },
+        { tableNumber: "AC18", capacity: 6, status: "Occupied" },
+        { tableNumber: "AC19", capacity: 2, status: "Available" },
+        { tableNumber: "AC20", capacity: 4, status: "Reserved" },
+      ],
+    },
+    {
+      section: "Garden",
+      tables: [
+        { tableNumber: "G1", capacity: 4, status: "Available" },
+        { tableNumber: "G2", capacity: 6, status: "Occupied" },
+        { tableNumber: "G3", capacity: 2, status: "Available" },
+        { tableNumber: "G4", capacity: 4, status: "Reserved" },
+        { tableNumber: "G5", capacity: 4, status: "Available" },
+        { tableNumber: "G6", capacity: 6, status: "Occupied" },
+        { tableNumber: "G7", capacity: 2, status: "Available" },
+        { tableNumber: "G8", capacity: 4, status: "Reserved" },
+        { tableNumber: "G9", capacity: 4, status: "Available" },
+        { tableNumber: "G10", capacity: 6, status: "Occupied" },
+        { tableNumber: "G11", capacity: 2, status: "Available" },
+        { tableNumber: "G12", capacity: 4, status: "Reserved" },
+        { tableNumber: "G13", capacity: 4, status: "Available" },
+        { tableNumber: "G14", capacity: 6, status: "Occupied" },
+        { tableNumber: "G15", capacity: 2, status: "Available" },
+        { tableNumber: "G16", capacity: 4, status: "Reserved" },
+        { tableNumber: "G17", capacity: 4, status: "Available" },
+        { tableNumber: "G18", capacity: 6, status: "Occupied" },
+        { tableNumber: "G19", capacity: 2, status: "Available" },
+        { tableNumber: "G20", capacity: 4, status: "Reserved" },
+      ],
+    },
+    {
+      section: "None AC",
+      tables: [
+        { tableNumber: "NA1", capacity: 4, status: "Occupied" },
+        { tableNumber: "NA2", capacity: 6, status: "Available" },
+        { tableNumber: "NA3", capacity: 2, status: "Reserved" },
+        { tableNumber: "NA4", capacity: 4, status: "Available" },
+        { tableNumber: "NA5", capacity: 6, status: "Occupied" },
+      ],
+    },
+    {
+      section: "Rooftop",
+      tables: [
+        { tableNumber: "RT1", capacity: 4, status: "Available" },
+        { tableNumber: "RT2", capacity: 6, status: "Reserved" },
+        { tableNumber: "RT3", capacity: 2, status: "Occupied" },
+        { tableNumber: "RT4", capacity: 4, status: "Available" },
+        { tableNumber: "RT5", capacity: 4, status: "Occupied" },
+      ],
+    },
+    {
+      section: "Second Floor",
+      tables: [
+        { tableNumber: "SF1", capacity: 4, status: "Available" },
+        { tableNumber: "SF2", capacity: 6, status: "Occupied" },
+        { tableNumber: "SF3", capacity: 2, status: "Reserved" },
+        { tableNumber: "SF4", capacity: 4, status: "Available" },
+        { tableNumber: "SF5", capacity: 6, status: "Occupied" },
+      ],
+    },
+    {
+      section: "Smoking Area",
+      tables: [
+        { tableNumber: "SA1", capacity: 2, status: "Occupied" },
+        { tableNumber: "SA2", capacity: 4, status: "Available" },
+        { tableNumber: "SA3", capacity: 6, status: "Reserved" },
+        { tableNumber: "SA4", capacity: 4, status: "Occupied" },
+        { tableNumber: "SA5", capacity: 2, status: "Available" },
+      ],
+    },
+  ];
+
+
+  export const matchColor = [
+      {color: "light", lable: "Blank Table"},
+      {color: "primary", lable: "Running Table"},
+      {color: "success", lable: "Printed Table"},
+      {color: "warning", lable: "Paid Table"},
+      {color: "info", lable: "Running KOT Table"},
+  ]
+  

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
+import { Popconfirm } from "antd";
 
 const OrderList = () => {
   const [fromDate, setFromDate] = useState("");
@@ -12,11 +14,11 @@ const OrderList = () => {
     { sl: 3, invoiceNo: 514, customerName: "jghgh ghigh", waiter: "", table: "", state: "Pending", orderDate: "2024-12-23", amount: 32.6 },
     { sl: 4, invoiceNo: 513, customerName: "Charlotte Sexton", waiter: "online order", table: "", state: "Pending", orderDate: "2024-12-23", amount: 2432.25 },
     { sl: 5, invoiceNo: 512, customerName: "jghgh ghigh", waiter: "", table: "", state: "Pending", orderDate: "2024-12-23", amount: 1265.0 },
-   
+
   ];
 
   const handleSearch = () => {
-   
+
   };
 
   const handleReset = () => {
@@ -31,25 +33,25 @@ const OrderList = () => {
         <i className="bi bi-house-fill me-2" style={{ fontSize: "1.5rem" }}></i>
         <h3 className="mb-0">Order List</h3>
       </div>
-   
+
       <div className="container mt-4">
         <div className="card shadow">
           <div className="card-header bg-dark text-white d-flex justify-content-between align-items-center">
             <h4>Order List</h4>
             <div className="d-flex">
-              <input 
-                type="date" 
-                className="form-control me-2" 
+              <input
+                type="date"
+                className="form-control me-2"
                 value={fromDate}
                 onChange={(e) => setFromDate(e.target.value)}
-                style={{ width: "150px", cursor: 'pointer' }} 
+                style={{ width: "150px", cursor: 'pointer' }}
               />
-              <input 
-                type="date" 
-                className="form-control me-2" 
+              <input
+                type="date"
+                className="form-control me-2"
                 value={toDate}
                 onChange={(e) => setToDate(e.target.value)}
-                style={{ width: "150px", cursor: 'pointer' }} 
+                style={{ width: "150px", cursor: 'pointer' }}
               />
               <button className="btn btn-success me-2" onClick={handleSearch}>Search</button>
               <button className="btn btn-danger" onClick={handleReset}>Reset</button>
@@ -66,13 +68,13 @@ const OrderList = () => {
                 <button className="btn btn-dark">Column Visibility</button>
               </div>
               <div className="d-flex">
-                <input 
-                  type="text" 
-                  className="form-control me-2" 
-                  placeholder="Search" 
+                <input
+                  type="text"
+                  className="form-control me-2"
+                  placeholder="Search"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  style={{ width: "150px" }} 
+                  style={{ width: "150px" }}
                 />
               </div>
             </div>
@@ -87,6 +89,7 @@ const OrderList = () => {
                   <th>State</th>
                   <th>Order Date</th>
                   <th>Amount</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -100,6 +103,23 @@ const OrderList = () => {
                     <td>{row.state}</td>
                     <td>{row.orderDate}</td>
                     <td>{row.amount.toFixed(2)}</td>
+                    <td>
+                      <div className="d-flex">
+                        <Link className="btn btn-primary shadow btn-xs sharp me-1"><i className="fa fa-pencil" /></Link>
+                        <Link to="/order-detail" className="btn btn-success shadow btn-xs sharp me-1"><i class="fa-regular fa-eye"></i></Link>
+                        <Link to="/pos-invoice" className="btn btn-success shadow btn-xs sharp me-1"><i class="fa-solid fa-money-bill-wave"></i></Link>
+                        <Popconfirm
+                          title="Delete Block!"
+                          description="Are you sure to delete ?"
+                          onConfirm=""
+                          onCancel=""
+                          okText="Yes"
+                          cancelText="No"
+                        >
+                          <Link to="#" className="btn btn-danger shadow btn-xs sharp"><i className="fa fa-trash" /></Link>
+                        </Popconfirm>
+                      </div>
+                    </td>
                   </tr>
                 ))}
               </tbody>
